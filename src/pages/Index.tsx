@@ -14,7 +14,7 @@ interface Message {
 const Index = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
-      text: "Hello! I'm your AI assistant powered by Google Gemini. How can I help you today?",
+      text: "Hello! I'm Monil, your AI assistant powered by Google Gemini. How can I help you today?",
       isUser: false
     }
   ]);
