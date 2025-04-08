@@ -5,9 +5,10 @@ import { cn } from '@/lib/utils';
 interface ChatMessageProps {
   message: string;
   isUser: boolean;
+  isLoading?: boolean;
 }
 
-const ChatMessage: React.FC<ChatMessageProps> = ({ message, isUser }) => {
+const ChatMessage: React.FC<ChatMessageProps> = ({ message, isUser, isLoading }) => {
   return (
     <div 
       className={cn(
