@@ -6,6 +6,7 @@ import ChatInput from './ChatInput';
 interface Message {
   text: string;
   isUser: boolean;
+  isLoading?: boolean;
 }
 
 interface ChatContainerProps {
@@ -30,6 +31,7 @@ const ChatContainer: React.FC<ChatContainerProps> = ({ messages, onSendMessage, 
               key={index} 
               message={message.text} 
               isUser={message.isUser} 
+              isLoading={message.isLoading}
             />
           ))}
           <div ref={messagesEndRef} />

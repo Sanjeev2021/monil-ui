@@ -6,9 +6,12 @@ interface GeminiMessage {
   }>;
 }
 
+// Fixed API key - no longer requiring user input
+const DEFAULT_API_KEY = "AIzaSyD5jMB6FmRXKmdk0nvSe7fxYqD1w-x3meo";
+
 export const generateGeminiResponse = async (
   prompt: string,
-  apiKey: string = "YOUR_API_KEY" // Default value, should be replaced with user's API key
+  apiKey: string = DEFAULT_API_KEY 
 ): Promise<string> => {
   try {
     const url = `https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
